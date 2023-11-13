@@ -1,10 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes.js';
-import cookieParser from 'cookie-parser';
-import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import cors from 'cors';
-import pool from './db/connectDB.js';
+import cookieParser from 'cookie-parser';
+import userRoutes from './routes/userRoutes.js';
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 dotenv.config();
 const port = process.env.PORT || 5000;
