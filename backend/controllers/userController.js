@@ -102,7 +102,6 @@ const getUserProfile = asyncHandler(async (req, res) => {
 // route    PUT api/users/profile
 // @access  Private
 const updateUserProfile = asyncHandler(async (req, res) => {
-  console.log(req.user);
   const getUserQueryText = 'SELECT id, username, password, steamId FROM users WHERE id = $1';
   const getUserQueryValues = [req.user.id];
   const getUserQuery = await pool.query(getUserQueryText, getUserQueryValues);
